@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Nikita Belousov" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+    
+	<title>The Shah Revolution | Home</title>
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+    <!-- Loading -->
+    <script type="text/javascript">
+    $(function() { 
+    $('.main_content, .main_navi').hide(); 
+    $(window).load( function() {  
+    $('#loader').fadeOut();
+    $('.main_content, .main_navi').fadeIn(500); 
+    } );
+    } );
+                        
+    $(document).ready(function() {
+    $("body").css("display", "none");
+
+    $("body").fadeIn(500);
+
+	$("a.transition").click(function(event){
+		event.preventDefault();
+		linkLocation = this.href;
+		$("body").fadeOut(500, redirectPage);
+	});
+
+	function redirectPage() {
+		window.location = linkLocation;
+	}
+    });
+    </script>
+    
+</head>
+
+<body id="home">
+<div id="container">
+
+    <div class="stripe"></div>
+
+<div id="content">
+
+<!-- Header -->
+
+<div id="header">
+
+<div id="loader"><img alt="Loading.." src="img/ajax-loader.gif" /></div>
+
+<ul class="main_navi">
+        <li class="current"><a class="transition" href="index.htm">Home</a></li>
+        <li ><a class="transition" href="about.htm">About</a></li>
+        <li><a class="transition" href="portfolio.htm">My Code</a></li>
+        <li><a class="transition" href="resume.htm">Resume</a></li>
+        <li><a class="transition" href="dj.htm">DJ</a></li>
+        <li><a class="transition" href="contact.htm">Contact</a></li>
+</ul>
+
+<a title="Back to home" href="index.htm"><img alt="SimpleTipe" class="logo" src="img/logo.png" /></a>
+
+</div>
+
+
+
+<!-- Top Content -->
+<div class="main_content">
+
+ <div id="about_page">
+    <h1 class="portfolio">Welcome!</h1>   
+ </div>
+
+
+<div id="latest_blog">
+    <div class="post">
+        
+    <div class="info_item float">
+        <p>My name is Mirza Akbar Shah (aka "mas") and welcome to my web portfolio! I am a <b>software engineer</b>, <b>computer scientist</b>, <b>roboticist</b>, <b>teacher</b>, <b>entrepreneur</b> and even moonlight as an <b>electronic dance music DJ</b>. You can find out more about me and my work here, just navigate the tabs at the top.</p>
+
+       <p>I currently live in the <b>San Francisco Bay Area</b> and am always on the lookout for new and interesting opportunities, whether full-time or consulting. I am primarily interested in software engineering and project management positions, especially those that have an emphasis on <b>robotics</b>, <b>artificial intelligence</b>, and/or <b>programming language/compiler implementation</b>. If you are a prospective employer or client, check out my <a href="resume.htm">resume</a> and <a href="contact.htm">contact</a> me if you would like to talk.</p>
+    </div>
+    
+    <img src="http://www.theshahrevolution.com/Download/selfphoto.jpg" width="411.4" height="286.55"/>
+        
+    </div>
+
+</div>
+
+<div id="footer">
+    &#169; Copyright (c) Mirza Akbar Shah. All rights reserved.
+    
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

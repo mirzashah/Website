@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Nikita Belousov" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+    
+	<title>The Shah Revolution | Resume</title>
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+    <!-- Loading -->
+    <script type="text/javascript">
+    $(function() { 
+    $('.main_content, .main_navi').hide(); 
+    $(window).load( function() {  
+    $('#loader').fadeOut();
+    $('.main_content, .main_navi').fadeIn(500); 
+    } );
+    } );
+                        
+    $(document).ready(function() {
+    $("body").css("display", "none");
+
+    $("body").fadeIn(500);
+
+	$("a.transition").click(function(event){
+		event.preventDefault();
+		linkLocation = this.href;
+		$("body").fadeOut(500, redirectPage);
+	});
+
+	function redirectPage() {
+		window.location = linkLocation;
+	}
+    });
+    </script>
+    
+</head>
+
+<body id="home">
+<div id="container">
+
+    <div class="stripe"></div>
+
+<div id="content">
+
+<!-- Header -->
+
+<div id="header">
+
+<div id="loader"><img alt="Loading.." src="img/ajax-loader.gif" /></div>
+
+<ul class="main_navi">
+        <li><a class="transition" href="index.htm">Home</a></li>
+        <li><a class="transition" href="about.htm">About</a></li>
+        <li><a class="transition" href="portfolio.htm">My Code</a></li>
+        <li class="current"><a class="transition" href="resume.htm">Resume</a></li>
+        <li><a class="transition" href="dj.htm">DJ</a></li>
+        <li><a class="transition" href="contact.htm">Contact</a></li>
+</ul>
+
+<a title="Back to home" href="index.htm"><img alt="SimpleTipe" class="logo" src="img/logo.png" /></a>
+
+</div>
+
+
+
+<!-- Top Content -->
+<div class="main_content">
+
+    <div id="about_page">
+    <h1 class="portfolio">Resume</h1>   
+    <p class="portfolio">
+   <b>&#149; <a href="http://www.theshahrevolution.com/Download/resume_shah.pdf">PDF</a></b><br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/Download/resume_shah.tex">LaTeX</a></b>
+   </p>
+    </div>
+
+    </div>
+    
+    <div id="about_page">
+    <h2 class="portfolio">Objective</h2> 
+    <p class="portfolio">A full-time or consulting position in software engineering or project management, preferably with a focus on robotics, artificial intelligence, and/or programming language implementation.</p>
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">Education</h2> 
+    <p class="portfolio">
+      <b>Master of Science</b>, Computer Science & Engineering <br>
+      <a href="http://www.psu.edu">Penn State University</a>, University Park, PA &ndash; July 2011 <br>
+      GPA: 3.71 / 4.00 <br>
+      <a href="http://www.theshahrevolution.com/Download/thesis_shah.pdf">Thesis: <i>A Language-Based Software Framework for Mission Planning in Autonomous
+      Mobile Robots</i></a><br>
+      Designed and implemented a domain-specific programming language and compiler in OCaml for mission planning in autonomous mobile robots. Users can program a robot with a highly declarative specification and generate (via compilation) a fine-grained, timestamped, set of imperative commands for the robot&rsquo;s actuators and subsystems. Users can customize the semantics of the language primitives utilizing a plug-in system via an object-oriented API. Using this system results in faster development of autonomy software for robots, increases reuse of code through plug-ins, graceful degradation of robot performance through exception handling, and provides high levels of static and run-time verification to guarantee operational correctness of robot.
+      </p>
+
+    <p class="portfolio">
+<b>Bachelor of Science</b>, Computer Science<br>
+<a href="http://www.psu.edu">Penn State University</a>, University Park, PA &ndash; May 2005<br>
+Overall GPA: 3.65 / 4.00<br>
+Major GPA: 3.67 / 4.00<br>
+      </p>
+    </div>
+
+
+    <div id="about_page">
+    <h2 class="portfolio">Computer Skills</h2> 
+    <p class="portfolio">
+   <b>Key Areas of Expertise:</b> Software Engineering, Autonomous Control Systems, Artificial Intelligence, Computer Science, Robotics, Operations Research
+   <br><br>
+   <b>Strongest Computer Science Areas:</b> Programming Languages, Operating Systems, Computer Networks, Data Structures & Algorithms, Computer Architecture, Compilers, Artificial Intelligence, Database Management Systems, Computer Graphics, Theory of Computation, Discrete Mathematics
+   <br><br>
+   <b>Programming Paradigms:</b> Functional, Object-Oriented, Procedural/Imperative
+   <br><br>
+   <b>Programming Languages:</b> C, C++, OCaml, Matlab, Java, C#, LaTeX
+   <br><br>
+   <b>Software Development Skills:</b> Disciplined Software Engineering, Configuration Management Systems/Revision Control Systems, Bug Tracking Systems, Code Documentation Systems, Multi-threaded Programming, Design Patterns, Code Refactoring
+   <br><br>
+   <b>Software Development Tools:</b> gcc, Microsoft Visual Studio, Eclipse, gdb, Code::Blocks, mex (Matlab), GNU Make, CMake, lex, yacc, Subversion (svn), Unified Modeling Language (UML), Arduino IDE, Doxygen
+   <br><br>
+   <b>Software Development Libraries:</b> OpenGL (3D graphics), Berkeley sockets (network programming), Gtk+ (GUI programming), MFC (GUI programming), sqlite (database), MySQL (database), GDI/GDI+ (2D graphics), pthreads (POSIX threads), Boost (C++ extensions), lpsolve (linear program solver), MOOS
+   (robotics), DevIL (image rendering), Gambit (game theory solver)
+   <br><br>
+   <b>Operating Systems:</b> Linux, Unix, Windows, MacOS X
+   <br><br>
+   <b>Information Technology Skills:</b> Server Deployment (database management systems, web servers, wikis, source control, etc), Network Deployment (setting up routers, switches, etc), System Administration
+   </p>
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">Languages</h2> 
+    <p class="portfolio">
+   <b>English (American):</b> <i>Native Speaker</i><br>
+   <b>Hindi/Urdu:</b> <i>Fluent</i>
+   </p>
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">Experience</h2> 
+   <p class="portfolio">
+   <b>Founder and Technology Development Lead</b><br>
+   <i>Emoto Robotics (Not incorporated)</i><br>
+   <i>December 2011 - Present</i><br>
+   &#149;  Founder of a robotics startup focused on giving robots personality, emotion, human awareness, and other anthropomorphically-desirable qualities.<br>
+   &#149;  Created original concept, all software, and a fully-functioning robotic prototype with features including state-of-the-art facial tracking, speech recognition, and sophisticated emotions & interaction model<br>
+   <br>
+   <b>Instructor (Adjunct Faculty)</b><br>
+   <i><a href="http://www.cse.psu.edu">Penn State University - Department of Computer Science & Engineering</a></i><br>
+   <i>August 2011 - December 2011</i><br>
+   &#149;  Taught 156 non-technical university students the basics of computer science and programming in C++<br>
+   &#149;  Designed course from scratch to make computer science more compelling to non-technical people. Managed course with a <a href="http://www.theshahrevolution.com/CMPSC101">wiki</a>.<br>
+   &#149;  Wrote entire <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=Category:Textbook">textbook</a>, all <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=Category:Homework">assignments</a>, and <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=Category:Tools">course software</a>. Released at the end of the semester under open source licenses.<br>
+   &#149;  Taught students more practical applications of programming, including basics of autonomous robotics and making games. <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=Category:Student_Projects">Final project</a> involved making a graphical game in C++ more complex than Pong.<br>
+   <br>
+   <b>Research Engineer</b><br>
+   <i><a href="http://www.arl.psu.edu">Penn State University Applied Research Laboratory</a></i><br>
+   <i>Autonomous Control & Intelligent Systems Division</i><br>
+   <i>Operations Research Department</i><br>
+   <i>July 2010 - December 2011</i><br>
+   &#149;  Main role was applying computer science and software engineering principles to operations research problems in military applications, primarily naval warfare. Operations research is the study of finding optimal/near-optimal solutions to complex scheduling/logistics problems.<br>
+   &#149;  Software engineering/computer science lead in group.<br>
+   &#149;  Frequently involved implementation and optimization of computationally demanding algorithms. Required a good understanding of data structures, complexity theory, computer architecture, and concurrent computing.<br>
+   &#149;  Areas of focus: game theory, genetic algorithms, probabilistic methods, constraint programming, multi-objective optimization.<br>
+   <br>
+   <b>Research Engineer</b><br>
+   <i><a href="http://www.arl.psu.edu">Penn State University Applied Research Laboratory</a></i><br>
+   <i>Autonomous Control & Intelligent Systems Division</i><br>
+   <i>Intelligent Control Systems Department</i><br>
+   <i>August 2005 - July 2010</i><br>
+   &#149;  Developer of autonomous control software for systems built by ARL, primarily autonomous underwater vehicles (AUVs) used for military applications.<br>
+   &#149;  Designed several software libraries, frameworks, and applications in C and C++ for redundant tasks in robotics such as interprocess communication, geographical displays, graphics engines, physics engines, simulation, and behavior-based robotics.<br>
+   &#149;  Lead software engineer on several projects and participated in many field tests.<br>
+   &#149;  Pushed for more disciplined approach to software engineering and led initiatives leading to the deployment of a division-wide source control system and deployment of Lab-wide wiki to encourage collaboration.<br>
+   &#149;  Mentored several interns in the areas of software engineering and computer science.<br>
+   <br>
+   <b>Intern Research Engineer</b><br>
+   <i><a href="http://www.arl.psu.edu">Penn State University Applied Research Laboratory</a></i><br>
+   <i>Autonomous Control & Intelligent Systems Division</i><br>
+   <i>Intelligent Control Systems Department</i><br>
+   <i>May 2004 - August 2005</i><br>
+   &#149;  Ported a graphical Win32 application used for controlling an autonomous vehicle to a portable digital assistant (PDA) running WindowsMobile operating system. PDA could control a vehicle through a graphical display wirelessly as well as receive vehicle telemetry.<br>
+   &#149;  Wrote a comprehensive library for geographical calculations including map projections and access to various geographical data sets. Used for both navigation by autonomous robots as well as for rendering field telemetry on geographical displays.<br>
+   </p>
+
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">Publications</h2> 
+    <p class="portfolio">M. A. Shah, D. S. Neal, J. R. Williams, J. J. Weinschenk, &quot;Network and Field Control (NAFCON) for Persistent Littoral Undersea Surveillance,&quot; <i>Journal of Underwater Acoustics</i>, Volume 59, No. 3, July 2009.
+</p>
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">References</h2> 
+    <p class="portfolio"><b>Dr. Jeffrey Weinschenk</b> &ndash; <i>Supervisor at ARL</i><br>
+   Department Head - Operations Research Department, Penn State Applied Research Laboratory<br>
+   E-mail: jjw15@psu.edu<br>
+   Phone: (814)-863-0862<br>
+   <br>
+   <b>Mr. Matthew Davis</b> &ndash; <i>Colleague at ARL</i><br>
+   Instructor - Computer Science & Engineering Department, Penn State University<br>
+   Research Engineer - Intelligent Control Systems Department, Penn State Applied Research Laboratory<br>
+   E-mail: msd4@psu.edu<br>
+   Phone: (814)-865-2629<br>
+   <br>
+   <b>Dr. John Hannan</b> &ndash; <i>Thesis Adviser</i><br>
+   Associate Professor - Computer Science & Engineering Department, Penn State University<br>
+   E-mail: hannan@cse.psu.edu<br>
+   Phone: (814)-863-0702
+   </p>
+    </div>
+    
+<div id="footer">
+    &#169; Copyright (c) Mirza Akbar Shah. All rights reserved.
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

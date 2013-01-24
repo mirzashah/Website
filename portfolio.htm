@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<meta name="author" content="Nikita Belousov" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+    
+	<title>The Shah Revolution | My Code</title>
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+    <!-- Loading -->
+    <script type="text/javascript">
+    $(function() { 
+    $('.main_content, .main_navi').hide(); 
+    $(window).load( function() {  
+    $('#loader').fadeOut();
+    $('.main_content, .main_navi').fadeIn(500); 
+    } );
+    } );
+                        
+    $(document).ready(function() {
+    $("body").css("display", "none");
+
+    $("body").fadeIn(500);
+
+	$("a.transition").click(function(event){
+		event.preventDefault();
+		linkLocation = this.href;
+		$("body").fadeOut(500, redirectPage);
+	});
+
+	function redirectPage() {
+		window.location = linkLocation;
+	}
+    });
+    </script>
+    
+</head>
+
+<body id="portfolio">
+<div id="container">
+
+    <div class="stripe"></div>
+
+<div id="content">
+
+<!-- Header -->
+
+<div id="header">
+
+<div id="loader"><img alt="Loading.." src="img/ajax-loader.gif" /></div>
+
+<ul class="main_navi">
+        <li><a class="transition" href="index.htm">Home</a></li>
+        <li><a class="transition" href="about.htm">About</a></li>
+        <li class="current"><a class="transition" href="portfolio.htm">My Code</a></li>
+        <li><a class="transition" href="resume.htm">Resume</a></li>
+        <li><a class="transition" href="dj.htm">DJ</a></li>
+        <li><a class="transition" href="contact.htm">Contact</a></li>
+</ul>
+
+<a title="Back to home" href="index.htm"><img alt="SimpleTipe" class="logo" src="img/logo.png" /></a>
+
+</div>
+
+
+
+<!-- Top Content -->
+<div class="main_content">
+
+    <div id="about_page">
+    <h1 class="portfolio">Code Portfolio</h1>   
+    <p class="portfolio">This page has a list of some of the projects I have worked on. I have written much more code than this, much of it I have either lost over time (especially the things I wrote as a kid) and others are just proprietary applications from previous jobs that I cannot share and/or no longer have access too. Most of the code is buildable though it may take a little work to get the right dependencies particularly with the older code. If you are interested in building my code and need assistance, contact me and I will help you out.</p>
+
+<p class="portfolio">Though this page may have code that is useful to you, the main purpose of this page is to act as portfolio for potential employers and clients. The code will show you how my coding style, design discipline, technical prowess and breadth have evolved over the years.</p>
+    <br>
+    <h2 class="portfolio">Languages and Style</h2>
+<p class="portfolio">I know many programming languages (my strongest being C, C++, and OCaml), but think it&apos;s more important to be focused on understanding programming paradigms rather than languages. Like any good software developer, I can usually be proficient in a new language in a matter of hours to a week as long as I know the paradigm. I am adept at the functional, object-oriented, and procedural/imperative paradigms of coding. I believe in disciplined software development. I like to design software systems that are well thought-out, robust, modular, scalable, consistent, reusable, self-documenting, and withstand the test of time. I tend to write code in a highly declarative style, even if not using a declarative language, so as to minimize state, coupling, and potential bugs. I, am never afraid to refactor, use design patterns as needed but try not to overabstract, and most importantly I am always trying to become better at the art and science of software development.</p>
+ </div>
+   
+    <div id="about_page">
+    <h2 class="portfolio">GooGooGames (2011)</h2> 
+    <p class="portfolio">GooGooGames was a library I wrote for my students to allow them to learn how to make simple graphical applications (primarily games) and the concept of event-based programming. Essentially I designed a simple wrapper around OpenGL and FreeGLUT providing students with simple graphical primitives and registerable events. Together as a class, we implemented <i>Pong</i> so as to understand the library. My students then had to write a game as their final project using the library. They blew me away with their creativity and how much they were able to do with less than a semester of programming under their belt. You can check out their projects at my <a href="http://www.theshahrevolution.com/CMPSC101">Course Wiki</a>.<br>
+
+   <br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=GooGooGames">Manual and API Specification</a></b>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/CMPSCI101/GooGooGames</code>
+   <br>
+   <b>&#149; Example (Pong):</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/CMPSCI101/Pong</code>
+  </p>
+
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">VirtualRobot (2011)</h2> 
+    <p class="portfolio">VirtualRobot is a library I wrote for my students when teaching introductory programming at Penn State. I wanted to make computers fun and wanted to get them to understand the concept of an application programmer interface (API) by giving them a simple one to start with. The provided API allowed them to control a simple graphical robot on a map and also have it detect obstacles by issuing API calls. The idea was inspired by and very similar to the LOGO programming language.
+<br><br>
+The library was actually just a merging of the simulator and display tool I wrote for a Roomba I was using for my startup venture on the side (Emoto Robotics). As I was limited for time, it was the fastest way to get something to them. I was hoping to show them how they could transparently switch to a real robot (the Roomba) and use the same library, but alas we ran out of time.<br>
+
+   <br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=VirtualRobot">Manual and API Specification</a></b>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/CMPSCI101/VirtualRobot</code>
+  </p>
+
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">Stored Program Computer Simulator (2011)</h2> 
+    <p class="portfolio">The Stored Program Computer (SPC) Simulator is a simple assembly language and interpreter I made up for my students as an introduction to computation before moving them on to a higher level language. The idea was to teach them the fundamental concept of &quot;computation&quot; which is a concept that I believe is often lost on many folks that have gone through a CS curriculum. The SPC instruction set does not use registers and instead all instructions directly access the memory unit. Students can write an SPC program in a text file, run it from the command line using the simulator, and watch it produce step-by-step results of the computation. I also wanted to force my students to utilize a command line as most of them have never heard of such an interface to using a computer which was a very interesting experience!<br>
+   <br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=Stored_Program_Computer_Simulator">Manual</a></b>
+   <br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/CMPSC101/index.php?title=Chapter_1_-_Introduction_to_Computers_and_Computation#Stored_Program_Model_Instruction_Set">Description and Instruction Set (Textbook Chapter 1)</a></b>
+   <br>
+   <b>&#149; Application:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/CMPSCI101/StoredProgramComputer</code>
+  </p>
+
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">Modular Planning Framework & Language (2011)</h2> 
+    <p class="portfolio">The Modular Planning Framework and Language (MPFL) was the central focus of my research work in graduate school and the topic of my MS thesis. In a nutshell, MPFL is a programming language, compiler, and software framework to help robotic software developers build sophisticated deliberative planning capabilities in a piecemeal, modular, and reusable manner for their robot. Robots that utilize MPFL can be controlled using a highly declarative, statically-typed, programming language I designed. The framework and language are designed in a way to provide strong static and runtime checking to guarantee system correctness before and during robot missions by leveraging formal methods from programming language theory.</p>
+
+<p class="portfolio">MPFL is complex, difficult to describe and took many years to develop. For more information, check out my MS thesis. MPFL was written in OCaml using almost exclusively a pure functional style of coding (i.e. no side-effects and mutable variables).<br>  
+    <br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/Download/thesis_shah.pdf">Master's Thesis</a></b>
+   <br>
+   <b>&#149; Library and Demo App:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/MPFL</code>
+  </p>
+   </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">MatlabSQLite (2011)</h2> 
+    <p class="portfolio">MatlabSQLite is a simple binding I wrote to allow one to read from and write to an SQLite database from Matlab. I was not satisfied with any of the existing SQLite bindings for Matlab and found it faster to use Matlab and mex to write one that I found more suitable within a few hours.<br>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/MatlabSQLite</code>
+    </p>
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">TastySocket (2010)</h2> 
+    <p class="portfolio">TastySocket is yet another wrapper for TCP/IP sockets written in C++. Like many developers, I often have to use TCP/IP to communicate data between computers and processes over a network. I have directly used the Berkeley socket API, written many wrappers for it in the past, and have used third party ones such as the ones provided by Boost and GNU Common C++. However, no matter which way I have done it, I always find it annoying dealing with these libraries and often find them to be overkill for what I wanted to do.</p>
+
+<p class="portfolio">The idea behind TastySocket is not to think about the server/client paradigm, but rather to create a simple one-to-one connection between two processes. TastySocket provides only two main calls: Receive and Send which allow you to poll for incoming data and send data respectively. The connection is maintained transparently in the background. The library does not assume a particular wire protocol so you can use whatever you need for your specific application.<br>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/TastySocket</code>
+    </p>
+    </div>
+
+
+    <div id="about_page">
+    <h2 class="portfolio">GtkmmOpenGL (2008)</h2> 
+    <p class="portfolio">GtkmmOpenGL is a simple library that allows one to create a window with OpenGL context with the gtkmm (C++ binding of Gtk+) library. Though gtkmm has had that capability for a while, when I first used the library I could not get it to work on either Windows or Linux and there was no documentation. I attempted to contact the authors, but did not get a response. Therefore, I simply wrapped the C version of the code (i.e. Gtk+) and extended the gtkmm namespace with my version. <br>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/GtkmmOpenGL</code>
+    </p>
+    </div>
+
+
+    <div id="about_page">
+    <h2 class="portfolio">Mocha (2008)</h2> 
+    <p class="portfolio">Mocha is a cross-platform, high-performance, scene graph-based, 2D graphics engine written in C++ utilizing OpenGL, FTGL, and DevIL. I wrote Mocha to quickly create 2D geographical displays quickly with a variety of layers, smooth animations, sleek content, and yet be easy to use for an average developer. Mocha is independent of any widget/windowing toolkit (e.g. Gtk+, qt, MFC, WinForms, wxWidgets, etc) allowing it to be integrated into any existing GUI that allows one to create an OpenGL context. As OpenGL does not provide native support for rendering fonts or image files, I integrated the FTGL and DevIL libraries to provide the respective capabilities to the library. I would say Mocha is comparable to the popular SDL library. At the time of writing Mocha, it either was not available or I was not aware of it.<br>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/Mocha</code>
+    </p>
+    </div>
+
+
+    <div id="about_page">
+    <h2 class="portfolio">ConsoleMagic (2007)</h2> 
+    <p class="portfolio">ConsoleMagic is a simple library that allows one to create multiple text consoles in a C++ application. One of the problems I have had with text-based console applications is that it's difficult to read output of the program with many things going, especially if you have many modules, threads, etc writing output at the same time. Applications that link against ConsoleMagic can write to an infinite number of consoles in the way one uses &quot;cout&quot; in a C++ application. To use a new console, one just types:<br><br>
+<code>Console(0) &lt;&lt; &quot;Hello&quot; &lt;&lt; endl;</code></p>
+
+<p class="portfolio">The &#39;0&#39; can be substituted with any integer index. If the console has not yet been created, it will be created and pop up on the screen. The best part is that there is a console manager that allows you to save the positions of consoles on your screen so that the next time you run your app, they will be positioned in the correct places!</p>
+
+<p class="portfolio">ConsoleMagic uses the gtkmm (C++ wrapper for Gtk+) library to generate its consoles and runs on Windows, Mac, and Linux.<br>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/ConsoleMagic</code>
+    </p>
+    </div>
+
+
+    <div id="about_page">
+    <h2 class="portfolio">MapSystem (2005)</h2> 
+    <p class="portfolio">I wrote MapSystem as a means to deal with spatial systems defined in geographical coordinates (i.e. latitude/longitude). A common example is processing latitude/longitude coordinates from a GPS device. It is inconvenient to utilize geographical coordinates rather than a Cartesian (xyz) coordinate system, so MapSystem provides the ability to convert between the two systems. More importantly though, it is often convenient to go from geographical coordinates to a 2D Cartesian plane. However, as the Earth is an ellipsoid, you cannot just trivially flatten 3D coordinates to a 2D plane without distortion. In cartography, this is where the concept of map projections (think middle school geography class) comes from. MapSystem&#39;s main purpose is providing a variety of map projections to allow one to reason about 3D coordinates in a 2D space. I also used MapSystem to create my own digital 2D maps and visualization tools.</p>
+
+    <p class="portfolio">MapSystem is comparable to the open source PROJ4 library which I was not aware of at the time of writing the library. Like PROJ4 and just about any code out there that uses a map projection, the algorithms are based off of John Snyder&#39;s book &quot;Map Projections: A Working Manual&quot;.<br>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/MapSystem</code>
+    </p>
+    </div>
+
+    <div id="about_page">
+    <h2 class="portfolio">StreamsForPocketPC (2005)</h2> 
+    <p class="portfolio">Back in the day before the iPhone and Android, people used to carry around these things called Personal Digital Assistants (PDA) with the biggest player being Palm. Microsoft also had its own offering with a mobile OS they called "WindowsMobile" that not only powered their PDAs but also some of the earliest smartphones. WindowsMobile was an OS based off of WindowsCE.</p>
+
+<p class="portfolio">One of my first jobs was porting a C++ application from Windows to WindowsMobile. One of the problems with the SDK for WindowsMobile was the lack of C++ streams (e.g. iostream, fstream, sstream, etc). The code I was porting made extensive use of streams and it was a pain to remove every use of a feature that is so pervasive in any C++ code. Instead of removing the use of C++ streams, I simply wrote my own implementation of the standard library wrapping calls to the C standard library I/O functions (e.g. printf, fprintf, sprintf, etc). The solution worked fairly well, but more importantly, I learned about how the C++ standard library works. It was really neat to dive into the implementation code for things like &quot;cout&quot; and figure out how they actually work and then attempt to make them myself. It taught me that there's no magic to how programming languages and their standard libraries work. It was also my first insight into how the kernel of a programming language tends to be very tight and simple, and that all the functionality comes through creating abstractions utilizing those "kernel" primitives.<br>
+   <br>
+   <b>&#149; Library:</b> <code>svn checkout http://masprojects.googlecode.com/svn/trunk/StreamsForPocketPC</code>
+    </p>
+    </div>
+
+
+    <div id="about_page">
+    <h2 class="portfolio">Super Atomic Arabic Word Bomber (2004)</h2> 
+    <p class="portfolio">When I was a junior in college, I took an Arabic language class. Our instructor offered extra credit (5% to your final grade!) to anybody that could make a game that could help their fellow classmates learn the lessons from our class (e.g. vocabulary, grammar, etc). I proposed making a graphical computer game, which of course blew away the lame ideas of my fellow classmates. Though I lost the source code for the game, I found a binary version of the game that you can play on a Windows system or Linux box under Wine. It&apos;s a bit glitchy as it was meant to run on Windows XP and requires having the Arabic language pack, but you can still run it to get an idea of what it looks like. The game shows you a 2D city skyline with words falling from the sky in both Arabic and English. You have to match the Arabic words to their English meaning before the words hit the buildings, otherwise they will be destroyed and set ablaze with cheesy fire effects! As you get words right, the game speeds up automatically. At the top of the screen, you get a hint as to what the word closest to hitting a building is to help you forget. The game also has simple AI to make sure to spit words at you that you keep getting wrong. The game is written in C++ using Microsoft&#39;s MFC library.<br>
+   <br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/Download/SAAWBManual.pdf">Manual</a></b><br>
+   <b>&#149; <a href="http://www.theshahrevolution.com/Download/SAAWB.zip">Application (.zip)</a></b><i> I could only find Version 0.7 of the app and not 1.0 which had significant improvements, but you&#39;ll get the idea.</i>
+    </p>
+    </div>
+
+
+    
+<div id="footer">
+    &#169; Copyright (c) Mirza Akbar Shah. All rights reserved.
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
